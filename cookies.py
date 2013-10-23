@@ -353,7 +353,7 @@ def parse_string(data, unquote=default_unquote):
     # which will therefore not normalize as unicode and not compare to
     # the original.
     if isinstance(unquoted, bytes):
-        unquoted = unquoted.decode('utf-8')
+        unquoted = unquoted.decode('utf-8', 'replace')
     return unquoted
 
 

@@ -2081,6 +2081,7 @@ test_parse_string = _simple_test(parse_string, {
     None: None,
     '': '',
     b'': '',
+    b'%80': '\ufffd',
     })
 
 test_parse_domain = _simple_test(parse_domain, {
